@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import FetchItems from "../components/FetchItems";
 import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import FetchItems from "../components/FetchItems";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 function App() {
@@ -10,15 +10,14 @@ function App() {
 
   return (
     <>
-      <Header></Header>
+      {/* Background data process to handshake with API server */}
       <FetchItems />
-      {fetchStatus.currentlyFetching ? (
-        <LoadingSpinner></LoadingSpinner>
-      ) : (
-        <Outlet />
-      )}
+      <Header />
 
-      <Footer></Footer>
+      {/* Renders loading spinner while waiting for backend, otherwise yields views */}
+      {fetchStatus.currentlyFetching ? <LoadingSpinner /> : <Outlet />}
+
+      <Footer />
     </>
   );
 }

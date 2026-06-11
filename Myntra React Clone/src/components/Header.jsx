@@ -1,56 +1,56 @@
-import { IoPersonSharp } from "react-icons/io5";
-import { FaHeart } from "react-icons/fa6";
-import { GiShoppingBag } from "react-icons/gi";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  // Pulling the item tracking array to dynamically compute bag item count
   const bag = useSelector((store) => store.bag);
-  console.log(bag);
 
   return (
     <header>
-      <div className="logo_container">
-        <Link to="/">
+      <div className='logo_container'>
+        <Link to='/'>
           <img
-            className="myntra_home"
-            src="images/myntra_logo.webp"
-            alt="Myntra Home"
+            className='myntra_home'
+            src='/images/skincareLogo.png'
+            alt='Skincare Essentials Home'
           />
         </Link>
       </div>
-      <nav className="nav_bar">
-        <Link to="#">Men</Link>
-        <Link to="#">Women</Link>
-        <Link to="#">Kids</Link>
-        <Link to="#">Home & Living</Link>
-        <Link to="#">Beauty</Link>
-        <Link to="#">
-          Studio <sup>New</sup>
-        </Link>
+
+      <nav className='nav_bar'>
+        <Link to='/'>Shop Catalog</Link>
+        <a href='#'>AM Routine</a>
+        <a href='#'>PM Routine</a>
+        <a href='#'>
+          New Arrivals <sup>New</sup>
+        </a>
       </nav>
-      <div className="search_bar">
-        <span className="material-symbols-outlined search_icon">search</span>
+
+      <div className='search_bar'>
+        <span className='material-symbols-outlined search_icon'>search</span>
         <input
-          className="search_input"
-          placeholder="Search for products, brands and more"
+          className='search_input'
+          placeholder='Search for skincare brands, serums, sunscreens...'
         />
       </div>
-      <div className="action_bar">
-        <div className="action_container">
-          <IoPersonSharp />
-          <span className="action_name">Profile</span>
+
+      <div className='action_bar'>
+        <div className='action_container'>
+          <span className='material-symbols-outlined'>person</span>
+          <span className='action_name'>Profile</span>
         </div>
 
-        <div className="action_container">
-          <FaHeart />
-          <span className="action_name">Wishlist</span>
+        <div className='action_container'>
+          <span className='material-symbols-outlined'>favorite</span>
+          <span className='action_name'>Wishlist</span>
         </div>
 
-        <Link className="action_container" to="/bag">
-          <GiShoppingBag />
-          <span className="action_name">Bag</span>
-          <span className="bag-item-count">{bag.length}</span>
+        <Link className='action_container' to='/bag'>
+          <span className='material-symbols-outlined'>shopping_bag</span>
+          <span className='action_name'>Bag</span>
+          {bag.length > 0 && (
+            <span className='bag-item-count'>{bag.length}</span>
+          )}
         </Link>
       </div>
     </header>

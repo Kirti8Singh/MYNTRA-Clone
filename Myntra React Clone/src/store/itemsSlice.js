@@ -4,13 +4,12 @@ const itemsSlice = createSlice({
   name: "items",
   initialState: [],
   reducers: {
-    addInitialItems: (state,action) => {
+    // Populates your catalog state array cleanly upon initial backend fetch load
+    addInitialItems: (state, action) => {
       return action.payload;
-    }
-  }
+    },
+  },
 });
 
 export const itemsActions = itemsSlice.actions;
-
 export default itemsSlice;
-
