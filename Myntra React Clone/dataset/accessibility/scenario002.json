@@ -1,0 +1,303 @@
+{
+  "scenarioId": "SPA-A11Y-002",
+  "beforeInteraction": {
+    "bagCountElements": 0,
+    "bagText": "shopping_bag\nBag",
+    "ariaSnapshot": "- link \"shopping_bag Bag\":\n  - /url: /bag",
+    "violationsCount": 2,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "affectedElements": [
+          {
+            "html": "<sup>New</sup>",
+            "target": [
+              "sup"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ff3f6c, background color: #ffffff, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 1450</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(20% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 800</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 499</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 1250</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 2100</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 7500</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"copyright\">© 2026 www.skincareessentials.com. All rights reserved.</div>",
+            "target": [
+              ".copyright"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #7e818c, background color: #fbfcff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+        "help": "Page should contain a level-one heading",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/page-has-heading-one?application=playwright",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ],
+        "affectedElements": [
+          {
+            "html": "<html lang=\"en\">",
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix all of the following:\n  Page must have a level-one heading"
+          }
+        ]
+      }
+    ]
+  },
+  "afterInteraction": {
+    "bagCountElements": 1,
+    "bagText": "shopping_bag\nBag\n1",
+    "ariaSnapshot": "- link \"shopping_bag Bag 1\":\n  - /url: /bag",
+    "violationsCount": 2,
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "affectedElements": [
+          {
+            "html": "<sup>New</sup>",
+            "target": [
+              "sup"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ff3f6c, background color: #ffffff, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 1450</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(20% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 800</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 499</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 1250</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 2100</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 7500</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .original-price"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #7e818c, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .discount"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #ff905a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"copyright\">© 2026 www.skincareessentials.com. All rights reserved.</div>",
+            "target": [
+              ".copyright"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #7e818c, background color: #fbfcff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+        "help": "Page should contain a level-one heading",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/page-has-heading-one?application=playwright",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ],
+        "affectedElements": [
+          {
+            "html": "<html lang=\"en\">",
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix all of the following:\n  Page must have a level-one heading"
+          }
+        ]
+      }
+    ]
+  },
+  "dynamicChange": {
+    "bagCountChanged": true,
+    "bagTextChanged": true,
+    "ariaSnapshotChanged": true,
+    "axeViolationCountChanged": false
+  }
+}

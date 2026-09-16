@@ -1,0 +1,48 @@
+{
+  "scenarioId": "SPA-A11Y-002",
+  "scenarioName": "Dynamic bag-count update after Add to Bag",
+  "application": {
+    "name": "Myntra React Clone",
+    "url": "http://localhost:5173/",
+    "framework": "React",
+    "stateManagement": "Redux"
+  },
+  "scenarioType": "dynamic",
+  "userAction": {
+    "action": "Click Add to Bag",
+    "target": ".item-container:first button",
+    "description": "User clicks the Add to Bag button for the first visible product."
+  },
+  "stateTransition": {
+    "before": {
+      "bagCount": 0,
+      "bagCountElementPresent": false
+    },
+    "after": {
+      "bagCount": 1,
+      "bagCountElementPresent": true
+    }
+  },
+  "accessibilityObservation": {
+    "axeViolationsBefore": 2,
+    "axeViolationsAfter": 2,
+    "accessibilityTreeChanged": true
+  },
+  "artifacts": {
+    "beforeScreenshot": "dataset/screenshots/scenario002_before.png",
+    "afterScreenshot": "dataset/screenshots/scenario002_after.png",
+    "beforeDom": "dataset/dom/scenario002_before.html",
+    "afterDom": "dataset/dom/scenario002_after.html",
+    "accessibilityResults": "dataset/accessibility/scenario002.json"
+  },
+  "repair": {
+    "status": "not-repaired",
+    "description": null
+  },
+  "verification": {
+    "status": "dynamic-state-captured",
+    "bagCountUpdated": true,
+    "axeViolationsBefore": 2,
+    "axeViolationsAfter": 2
+  }
+}
