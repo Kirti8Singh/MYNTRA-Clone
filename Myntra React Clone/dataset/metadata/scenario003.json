@@ -21,7 +21,7 @@
     "totalViolationsAfter": 2,
     "newViolationIds": [],
     "functionalCheckPassed": true,
-    "checkedAt": "2026-09-18T06:49:20.848Z"
+    "checkedAt": "2026-09-18T07:19:22.620Z"
   },
   "artifacts": {
     "beforeAccessibility": "dataset/evidence/SPA-A11Y-003/defective-accessibility.json",

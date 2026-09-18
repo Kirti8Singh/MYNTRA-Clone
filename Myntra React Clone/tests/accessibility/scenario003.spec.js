@@ -32,6 +32,13 @@ test("SPA-A11Y-003 - Verify AI repair of missing search label", async ({ page })
 
   await page.goto("/");
   await page.waitForSelector(".search_bar", { state: "visible", timeout: 10000 });
+  // The backend has an artificial delay before /items resolves, during which
+  // App.jsx renders a spinner with NO <main> at all (Outlet, which holds the
+  // homepage's <main>, only mounts once fetchStatus.currentlyFetching is
+  // false). Header renders immediately regardless, so waiting on .search_bar
+  // alone lets axe scan mid-spinner and wrongly flag landmark-one-main.
+  // Wait for real homepage content before scanning.
+  await page.waitForSelector("main .items-container", { state: "visible", timeout: 15000 });
 
   const searchInput = page.locator("input.search_input");
   await expect(searchInput).toBeVisible();

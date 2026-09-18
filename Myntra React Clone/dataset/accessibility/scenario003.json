@@ -137,6 +137,78 @@
             ]
           },
           {
+            "html": "<span class=\"original-price\">Rs 1450</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(20% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(1) > .price > .discount"
+            ]
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 800</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(2) > .price > .discount"
+            ]
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 499</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(3) > .price > .discount"
+            ]
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 1250</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(4) > .price > .discount"
+            ]
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 2100</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(5) > .price > .discount"
+            ]
+          },
+          {
+            "html": "<span class=\"original-price\">Rs 7500</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .original-price"
+            ]
+          },
+          {
+            "html": "<span class=\"discount\">(10% OFF)</span>",
+            "target": [
+              ".item-container:nth-child(6) > .price > .discount"
+            ]
+          },
+          {
             "html": "<div class=\"copyright\">© 2026 www.skincareessentials.com. All rights reserved.</div>",
             "target": [
               ".copyright"

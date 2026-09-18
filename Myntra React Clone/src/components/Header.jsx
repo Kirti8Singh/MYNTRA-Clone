@@ -30,6 +30,8 @@ const Header = () => {
         <span className='material-symbols-outlined search_icon'>search</span>
         <input
           className='search_input'
+          placeholder='Search for products, brands and more'
+          aria-label='Search'
         />
       </div>
 
