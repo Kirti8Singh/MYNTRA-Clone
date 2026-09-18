@@ -1,9 +1,16 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { searchActions } from "../store/searchSlice";
 
 const Header = () => {
   // Pulling the item tracking array to dynamically compute bag item count
   const bag = useSelector((store) => store.bag);
+  const searchQuery = useSelector((store) => store.search.query);
+  const dispatch = useDispatch();
+
+  const handleSearch = (event) => {
+    dispatch(searchActions.setSearchQuery(event.target.value));
+  };
 
   return (
     <header>
@@ -27,11 +34,23 @@ const Header = () => {
       </nav>
 
       <div className='search_bar'>
-        <span className='material-symbols-outlined search_icon'>search</span>
+        <span
+          className='material-symbols-outlined search_icon'
+          aria-hidden='true'
+        >
+          search
+        </span>
+
         <input
+          id='product-search'
+          name='product-search'
+          type='search'
           className='search_input'
           placeholder='Search for products, brands and more'
-          aria-label='Search'
+          aria-label='Search products and brands'
+          value={searchQuery}
+          onChange={handleSearch}
+          autoComplete='off'
         />
       </div>
 
