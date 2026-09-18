@@ -1,0 +1,34 @@
+{
+  "scenarioId": "SPA-A11Y-004",
+  "scenarioName": "Dynamic repair verification: bag item count not exposed to assistive tech",
+  "application": {
+    "name": "Myntra React Clone",
+    "url": "http://localhost:5173/",
+    "framework": "React",
+    "stateManagement": "Redux"
+  },
+  "scenarioType": "dynamic",
+  "repair": {
+    "status": "repaired",
+    "description": "AI-generated fix (Gemini) adding aria-live to bag item count"
+  },
+  "verification": {
+    "scenarioId": "SPA-A11Y-004",
+    "outcome": "REPAIRED",
+    "detectionMethod": "manual",
+    "liveRegionValid": true,
+    "ariaLiveValue": "polite",
+    "announcedTextIsBareNumber": true,
+    "functionalCheckPassed": true,
+    "totalViolationsBefore": 2,
+    "totalViolationsAfter": 2,
+    "newViolationIds": [],
+    "checkedAt": "2026-09-18T07:29:00.804Z"
+  },
+  "artifacts": {
+    "beforeDom": "dataset/dom/scenario004_before.html",
+    "afterDom": "dataset/dom/scenario004_after.html",
+    "afterScreenshot": "dataset/screenshots/scenario004_after.png",
+    "accessibilityResults": "dataset/accessibility/scenario004.json"
+  }
+}

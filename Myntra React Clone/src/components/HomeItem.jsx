@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
+import { toastActions } from "../store/toastSlice";
 
 const HomeItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -10,10 +11,12 @@ const HomeItem = ({ item }) => {
 
   const handleAddToBag = () => {
     dispatch(bagActions.addToBag(item.id));
+    dispatch(toastActions.showToast(`${item.item_name} added to bag`));
   };
 
   const handleRemoveFromBag = () => {
     dispatch(bagActions.removeFromBag(item.id));
+    dispatch(toastActions.showToast(`${item.item_name} removed from bag`));
   };
 
   return (

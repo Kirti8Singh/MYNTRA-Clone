@@ -1,0 +1,19 @@
+{
+  "state": "homepage",
+  "detection_method": "manual",
+  "interaction": {
+    "action": "Click the \"Add to Bag\" button for the first visible product",
+    "target": ".item-container:first-child button"
+  },
+  "accessibility_path": "accessibility/scenario004.json",
+  "before_dom_path": "dom/scenario004_before.html",
+  "after_dom_path": "dom/scenario004_after.html",
+  "violation": {
+    "id": "live-region-insufficient-context",
+    "impact": "moderate",
+    "target": [".bag-item-count"],
+    "help": "The bag item count updates (badge shows '1', etc.) but there is no visible or announced confirmation of WHAT changed for either sighted or screen-reader users. A Toast component now exists at src/components/Toast.jsx, wired into the Redux store as state.toast ({ message, visible }) via toastActions.showToast(message) / toastActions.hideToast() from src/store/toastSlice.js, and rendered globally in App.jsx. It already has role='status' and aria-live='polite', so any message dispatched through it is both visible AND announced to assistive tech automatically -- you do not need to add any other aria-live yourself.",
+    "html": "<span class=\"bag-item-count\" aria-live=\"polite\">1</span>"
+  },
+  "source_files": ["Myntra React Clone/src/components/HomeItem.jsx"]
+}

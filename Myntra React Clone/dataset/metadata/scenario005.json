@@ -1,0 +1,32 @@
+{
+  "scenarioId": "SPA-A11Y-005",
+  "scenarioName": "Refinement verification: bag-count feedback replaced with an accessible toast",
+  "application": {
+    "name": "Myntra React Clone",
+    "url": "http://localhost:5173/",
+    "framework": "React",
+    "stateManagement": "Redux"
+  },
+  "scenarioType": "dynamic",
+  "repair": {
+    "status": "repaired",
+    "description": "AI-generated fix (Gemini) wiring HomeItem.jsx to an accessible Toast component"
+  },
+  "verification": {
+    "scenarioId": "SPA-A11Y-005",
+    "outcome": "REPAIRED",
+    "detectionMethod": "manual",
+    "toastTextOnAdd": "Advanced Snail 96 Mucin Power Essence added to bag",
+    "toastTextOnRemove": "Advanced Snail 96 Mucin Power Essence removed from bag",
+    "hasValidLiveRegionRole": true,
+    "toastRole": "status",
+    "toastAriaLive": "polite",
+    "functionalCheckPassed": true,
+    "totalViolationsBefore": 2,
+    "newViolationIds": [],
+    "checkedAt": "2026-09-18T12:21:16.169Z"
+  },
+  "artifacts": {
+    "screenshotWithToast": "dataset/screenshots/scenario005_toast_visible.png"
+  }
+}
