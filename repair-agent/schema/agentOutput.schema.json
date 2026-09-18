@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "diagnosis": {
+      "type": "string",
+      "description": "Plain-language explanation of why this is an accessibility violation, grounded in the DOM/ARIA evidence provided."
+    },
+    "repair_strategy": {
+      "type": "string",
+      "description": "The approach chosen to fix it, and why this approach over alternatives."
+    },
+    "modified_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Repo-relative path, exactly matching one of the source_files given in the input."
+          },
+          "content": {
+            "type": "string",
+            "description": "The COMPLETE new content of this file after the fix — the whole file, not a snippet or diff."
+          }
+        },
+        "required": ["path", "content"],
+        "additionalProperties": false
+      },
+      "description": "One entry per file changed. Empty array if unrepairable is true."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "risk_notes": {
+      "type": "string",
+      "description": "Anything about this fix that could affect functionality, state handling, or styling. Empty string if none."
+    },
+    "unrepairable": {
+      "type": "boolean",
+      "description": "True if the agent could not produce a safe fix (in that case modified_files must be empty)."
+    }
+  },
+  "required": [
+    "diagnosis",
+    "repair_strategy",
+    "modified_files",
+    "confidence",
+    "risk_notes",
+    "unrepairable"
+  ],
+  "additionalProperties": false
+}

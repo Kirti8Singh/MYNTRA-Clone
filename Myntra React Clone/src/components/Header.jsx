@@ -30,7 +30,6 @@ const Header = () => {
         <span className='material-symbols-outlined search_icon'>search</span>
         <input
           className='search_input'
-          placeholder='Search for skincare brands, serums, sunscreens...'
         />
       </div>
 
@@ -49,7 +48,9 @@ const Header = () => {
           <span className='material-symbols-outlined'>shopping_bag</span>
           <span className='action_name'>Bag</span>
           {bag.length > 0 && (
-            <span className='bag-item-count'>{bag.length}</span>
+            <span className='bag-item-count' aria-live='polite'>
+              {bag.length}
+            </span>
           )}
         </Link>
       </div>

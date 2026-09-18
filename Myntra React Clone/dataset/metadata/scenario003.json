@@ -1,0 +1,33 @@
+{
+  "scenarioId": "SPA-A11Y-003",
+  "scenarioName": "Static repair verification: search input missing accessible name",
+  "application": {
+    "name": "Myntra React Clone",
+    "url": "http://localhost:5173/",
+    "framework": "React",
+    "stateManagement": "Redux"
+  },
+  "scenarioType": "static",
+  "repair": {
+    "status": "repaired",
+    "description": "AI-generated fix via Gemini repair agent"
+  },
+  "verification": {
+    "scenarioId": "SPA-A11Y-003",
+    "outcome": "REPAIRED",
+    "targetRule": "label",
+    "targetViolationResolved": true,
+    "totalViolationsBefore": 3,
+    "totalViolationsAfter": 2,
+    "newViolationIds": [],
+    "functionalCheckPassed": true,
+    "checkedAt": "2026-09-18T06:49:20.848Z"
+  },
+  "artifacts": {
+    "beforeAccessibility": "dataset/evidence/SPA-A11Y-003/defective-accessibility.json",
+    "beforeDom": "dataset/evidence/SPA-A11Y-003/defective-dom.html",
+    "afterScreenshot": "dataset/screenshots/scenario003_after.png",
+    "afterDom": "dataset/dom/scenario003_after.html",
+    "accessibilityResults": "dataset/accessibility/scenario003.json"
+  }
+}

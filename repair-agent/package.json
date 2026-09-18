@@ -1,0 +1,13 @@
+{
+  "name": "a11y-repair-agent",
+  "version": "0.1.0",
+  "description": "AI repair agent for accessibility defects in dynamic React SPAs",
+  "main": "src/runRepair.js",
+  "scripts": {
+    "repair": "node src/runRepair.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.0.0"
+  }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/images/skincareLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Essentials</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <style type="text/css" data-vite-dev-id="/Users/kirtisingh/Desktop/tutorial/Skincare/Myntra React Clone/src/index.css">/* --- Global Reset & Variable Scoping --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Layout Wrappers --- */
+header {
+  display: flex;
+  background-color: #ffffff;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo_container {
+  margin-left: 4%;
+}
+
+.myntra_home {
+  height: 45px;
+}
+
+.nav_bar {
+  display: flex;
+  min-width: 500px;
+  justify-content: space-evenly;
+}
+
+.nav_bar a {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #282c3f;
+  text-decoration: none;
+  padding: 28px 0;
+  border-bottom: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav_bar a:hover {
+  border-bottom: 4px solid #f54e77;
+}
+
+.nav_bar a sup {
+  color: #ff3f6c;
+  font-size: 10px;
+}
+
+/* --- Utilities & Search Engine UI --- */
+.search_bar {
+  display: flex;
+  background-color: #f5f5f6;
+  align-items: center;
+  height: 40px;
+  min-width: 300px;
+  width: 30%;
+  border-radius: 4px;
+}
+
+.search_icon {
+  box-sizing: content-box;
+  color: #696e79;
+  padding: 10px;
+}
+
+.search_input {
+  color: #696e79;
+  background-color: #f5f5f6;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* --- Right Side User Actions Menu --- */
+.action_bar {
+  display: flex;
+  min-width: 250px;
+  justify-content: space-evenly;
+  margin-right: 4%;
+}
+
+.action_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #282c3f;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.action_container svg {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* Dynamic Action Counter Badge Overlay */
+.bag-item-count {
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  background-color: #f54e77;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Main Grid Framework --- */
+.items-container {
+  width: 85%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.item-container {
+  width: 250px;
+  margin: 10px 10px 25px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.item-container:hover {
+  transform: translateY(-4px);
+}
+
+.item-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.rating {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.company-name {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #282c3f;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-name {
+  color: #535766;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.price {
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-weight: 700;
+  color: #282c3f;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #7e818c;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.discount {
+  color: #ff905a;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.btn-add-bag {
+  margin-top: 8px;
+  width: 100%;
+  border-radius: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+/* --- Checkout Layout (Cart / Bag View) --- */
+.bag-page {
+  width: 75%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bag-items-container {
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bag-summary {
+  vertical-align: top;
+  display: inline-block;
+  width: 32%;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.bag-details-container {
+  color: #282c3f;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-header {
+  font-weight: 700;
+  font-size: 13px;
+  color: #535766;
+  margin-bottom: 8px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.priceDetail-base-discount {
+  color: #03a685;
+}
+
+.price-footer {
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.btn-place-order {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 12px;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #ff3f6c;
+  transition: opacity 0.2s ease;
+}
+
+.btn-place-order:hover {
+  opacity: 0.9;
+}
+
+/* --- Cart Individual Item Card --- */
+.bag-item-container {
+  background: #fff;
+  border: 1px solid #eaeaec;
+  border-radius: 4px;
+  padding: 12px;
+  position: relative;
+  display: flex;
+  gap: 16px;
+}
+
+.item-left img {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.return-period {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.return-period-days {
+  font-weight: 700;
+}
+
+.delivery-details {
+  font-size: 13px;
+  color: #282c3f;
+  margin-top: 4px;
+}
+
+.delivery-details-days {
+  color: #03a685;
+  font-weight: 700;
+}
+
+.remove-from-cart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #282c3f;
+  transition: color 0.2s;
+}
+
+.remove-from-cart:hover {
+  color: #ff3f6c;
+}
+
+/* --- App Spinner --- */
+.spinner {
+  margin: 150px 0;
+}
+
+/* --- Footer Layer --- */
+footer {
+  background-color: #fbfcff;
+  padding: 40px 0 20px 0;
+  margin-top: 100px;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_column h3 {
+  color: #282c3f;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer_column a {
+  color: #696e79;
+  font-size: 15px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.copyright {
+  color: #7e818c;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+}</style></head>
+  <body>
+    <div id="root"><header><div class="logo_container"><a href="/" data-discover="true"><img class="myntra_home" alt="Skincare Essentials Home" src="/images/skincareLogo.png"></a></div><nav class="nav_bar"><a href="/" data-discover="true">Shop Catalog</a><a href="#">AM Routine</a><a href="#">PM Routine</a><a href="#">New Arrivals <sup>New</sup></a></nav><div class="search_bar"><span class="material-symbols-outlined search_icon">search</span><input class="search_input" placeholder="Search for skincare brands, serums, sunscreens..." style=""></div><div class="action_bar"><div class="action_container"><span class="material-symbols-outlined">person</span><span class="action_name">Profile</span></div><div class="action_container"><span class="material-symbols-outlined">favorite</span><span class="action_name">Wishlist</span></div><a class="action_container" href="/bag" data-discover="true"><span class="material-symbols-outlined">shopping_bag</span><span class="action_name">Bag</span></a></div></header><main><div class="items-container"></div></main><footer><div class="footer_container"><div class="footer_column"><h3>ONLINE SHOPPING</h3><a href="#">Cleansers</a><a href="#">Toners &amp; Serums</a><a href="#">Sunscreens</a><a href="#">Moisturizers</a><a href="#">Gift Cards</a></div><div class="footer_column"><h3>CUSTOMER POLICIES</h3><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">T&amp;C</a><a href="#">Terms Of Use</a><a href="#">Track Orders</a><a href="#">Shipping &amp; Delivery</a></div><div class="footer_column"><h3>EXPERIENCE SKINCARE APP ON MOBILE</h3><div class="d-flex gap-2 mt-2"><span class="badge bg-dark p-2 cursor-pointer">Google Play</span><span class="badge bg-dark p-2 cursor-pointer">App Store</span></div></div></div><hr><div class="copyright">© 2026 www.skincareessentials.com. All rights reserved.</div></footer></div>
+    <script type="module" src="/src/main.jsx"></script>
+  
+</body></html>

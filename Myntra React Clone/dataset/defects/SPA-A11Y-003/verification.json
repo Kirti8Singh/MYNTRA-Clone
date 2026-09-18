@@ -1,0 +1,11 @@
+{
+  "scenarioId": "SPA-A11Y-003",
+  "outcome": "REPAIRED",
+  "targetRule": "label",
+  "targetViolationResolved": true,
+  "totalViolationsBefore": 3,
+  "totalViolationsAfter": 2,
+  "newViolationIds": [],
+  "functionalCheckPassed": true,
+  "checkedAt": "2026-09-18T06:49:20.848Z"
+}

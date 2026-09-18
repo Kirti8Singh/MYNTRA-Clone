@@ -1,0 +1,14 @@
+diff --git a/Myntra React Clone/src/components/Header.jsx b/Myntra React Clone/src/components/Header.jsx
+index 20c757e..ce249cf 100644
+--- a/Myntra React Clone/src/components/Header.jsx	
++++ b/Myntra React Clone/src/components/Header.jsx	
+@@ -30,7 +30,8 @@ const Header = () => {
+         <span className='material-symbols-outlined search_icon'>search</span>
+         <input
+           className='search_input'
+-          placeholder='Search for skincare brands, serums, sunscreens...'
++          placeholder='Search for products, brands and more'
++          aria-label='Search for products, brands and more'
+         />
+       </div>
+ 

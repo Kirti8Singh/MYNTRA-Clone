@@ -1,0 +1,7 @@
+{
+  "state": "homepage",
+  "axe_rule_id": "label",
+  "accessibility_path": "evidence/SPA-A11Y-003/defective-accessibility.json",
+  "dom_path": "evidence/SPA-A11Y-003/defective-dom.html",
+  "source_files": ["Myntra React Clone/src/components/Header.jsx"]
+}

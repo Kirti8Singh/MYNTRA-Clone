@@ -1,0 +1,19 @@
+{
+  "state": "homepage",
+  "detection_method": "manual",
+  "interaction": {
+    "action": "Click the \"Add to Bag\" button for the first visible product",
+    "target": ".item-container:first-child button"
+  },
+  "accessibility_path": "accessibility/scenario002.json",
+  "before_dom_path": "dom/scenario002_before.html",
+  "after_dom_path": "dom/scenario002_after.html",
+  "violation": {
+    "id": "dynamic-state-not-announced",
+    "impact": "serious",
+    "target": [".bag-item-count"],
+    "help": "After 'Add to Bag' is clicked, a bag item count appears/updates inside the header's Bag link (from absent to '1'), but axe-core reports the SAME violation count before and after — it does not detect this as a problem because it only evaluates static snapshots. The count is not wrapped in an ARIA live region, so a screen reader user who is not focused on the Bag link receives no notification that an item was added.",
+    "html": "<span class=\"bag-item-count\">1</span>"
+  },
+  "source_files": ["Myntra React Clone/src/components/Header.jsx"]
+}

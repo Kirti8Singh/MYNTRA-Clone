@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-09-16T05:38:24.867Z",
+  "timestamp": "2026-09-18T07:02:36.523Z",
   "url": "http://localhost:5173/",
   "toolOptions": {
     "reporter": "v1"
@@ -1161,7 +1161,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
+          "html": "<input class=\"search_input\" style=\"\">",
           "target": [
             "input"
           ]
@@ -1703,7 +1703,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
+          "html": "<input class=\"search_input\" style=\"\">",
           "target": [
             "input"
           ]
@@ -3072,7 +3072,7 @@
             }
           ],
           "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
+          "html": "<input class=\"search_input\" style=\"\">",
           "target": [
             "input"
           ]
@@ -3614,56 +3614,7 @@
             }
           ],
           "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
-          "target": [
-            "input"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "label",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.n",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT",
-        "RGAAv4",
-        "RGAA-11.1.1"
-      ],
-      "description": "Ensure every form element has a label",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/label?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "non-empty-placeholder",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a placeholder attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
+          "html": "<input class=\"search_input\" style=\"\">",
           "target": [
             "input"
           ]
@@ -5052,7 +5003,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"search_bar\"><span class=\"material-symbols-outlined search_icon\">search</span><input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\"></div>",
+          "html": "<div class=\"search_bar\"><span class=\"material-symbols-outlined search_icon\">search</span><input class=\"search_input\" style=\"\"></div>",
           "target": [
             ".search_bar"
           ]
@@ -5092,7 +5043,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input class=\"search_input\" placeholder=\"Search for skincare brands, serums, sunscreens...\" style=\"\">",
+          "html": "<input class=\"search_input\" style=\"\">",
           "target": [
             "input"
           ]
@@ -7636,6 +7587,94 @@
             ".copyright"
           ],
           "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #7e818c, background color: #fbfcff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "impact": "critical",
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT",
+        "RGAAv4",
+        "RGAA-11.1.1"
+      ],
+      "description": "Ensure every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/label?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "implicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element does not have an explicit <label>"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "non-empty-placeholder",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has no placeholder attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "critical",
+          "html": "<input class=\"search_input\" style=\"\">",
+          "target": [
+            "input"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
         }
       ]
     },
