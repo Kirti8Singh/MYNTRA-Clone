@@ -57,10 +57,16 @@ const Header = () => {
       </div>
 
       <div className='action_bar'>
-        <div className='action_container'>
-          <span className='material-symbols-outlined'>person</span>
+        <Link
+          to='/profile'
+          className='action_container'
+          aria-label='Open profile'
+        >
+          <span className='material-symbols-outlined' aria-hidden='true'>
+            person
+          </span>
           <span className='action_name'>Profile</span>
-        </div>
+        </Link>
 
         <Link
           className='action_container'

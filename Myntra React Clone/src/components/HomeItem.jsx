@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
 import { toastActions } from "../store/toastSlice";
 import { wishlistActions } from "../store/wishlistSlice";
+import { Link } from "react-router-dom";
 
 const HomeItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -27,13 +28,54 @@ const HomeItem = ({ item }) => {
 
   return (
     <div className='item-container'>
-      <img className='item-image' src={item.image} alt={item.item_name} />
+
+      {/* Product image + information are clickable */}
+      <Link
+        to={`/product/${item.id}`}
+        className='product-card-link'
+      >
+        <img
+          className='item-image'
+          src={`/${item.image}`}
+          alt={item.item_name}
+        />
+
+        <div className='rating'>
+          {item.rating.stars} ⭐ | {item.rating.count} reviews
+        </div>
+
+        <div className='company-name'>
+          {item.company}
+        </div>
+
+        <div className='item-name'>
+          {item.item_name}
+        </div>
+
+        <div className='price'>
+          <span className='current-price'>
+            Rs {item.current_price}
+          </span>
+
+          <span className='original-price'>
+            Rs {item.original_price}
+          </span>
+
+          <span className='discount'>
+            ({item.discount_percentage}% OFF)
+          </span>
+        </div>
+      </Link>
+
+      {/* Wishlist button stays outside the Link */}
       <button
         type='button'
         className={`wishlist-button ${
           isWishlisted ? "wishlist-button-active" : ""
         }`}
-        onClick={() => dispatch(wishlistActions.toggleWishlist(item))}
+        onClick={() =>
+          dispatch(wishlistActions.toggleWishlist(item))
+        }
         aria-label={
           isWishlisted
             ? `Remove ${item.item_name} from wishlist`
@@ -41,21 +83,15 @@ const HomeItem = ({ item }) => {
         }
         aria-pressed={isWishlisted}
       >
-        <span className='material-symbols-outlined' aria-hidden='true'>
+        <span
+          className='material-symbols-outlined'
+          aria-hidden='true'
+        >
           {isWishlisted ? "favorite" : "favorite_border"}
         </span>
       </button>
-      <div className='rating'>
-        {item.rating.stars} ⭐ | {item.rating.count} reviews
-      </div>
-      <div className='company-name'>{item.company}</div>
-      <div className='item-name'>{item.item_name}</div>
-      <div className='price'>
-        <span className='current-price'>Rs {item.current_price}</span>
-        <span className='original-price'>Rs {item.original_price}</span>
-        <span className='discount'>({item.discount_percentage}% OFF)</span>
-      </div>
 
+      {/* Add / Remove from Bag */}
       {elementFound ? (
         <button
           type='button'
@@ -67,7 +103,9 @@ const HomeItem = ({ item }) => {
           }}
           onClick={handleRemoveFromBag}
         >
-          <span className='material-symbols-outlined'>delete</span>
+          <span className='material-symbols-outlined'>
+            delete
+          </span>
           Remove from Bag
         </button>
       ) : (
@@ -81,7 +119,9 @@ const HomeItem = ({ item }) => {
           }}
           onClick={handleAddToBag}
         >
-          <span className='material-symbols-outlined'>add_shopping_cart</span>
+          <span className='material-symbols-outlined'>
+            add_shopping_cart
+          </span>
           Add to Bag
         </button>
       )}

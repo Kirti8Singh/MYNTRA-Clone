@@ -7,6 +7,7 @@ import searchSlice from "./searchSlice";
 import filterSlice from "./filterSlice";
 import sortSlice from "./sortSlice";
 import wishlistSlice from "./wishlistSlice";
+import profileSlice from "./profileSlice";
 
 // Combining our modular slices into a centralized global store framework
 const myntraStore = configureStore({
@@ -19,6 +20,7 @@ const myntraStore = configureStore({
     filter: filterSlice.reducer,
     sort: sortSlice.reducer,
     wishlist: wishlistSlice.reducer,
+    profile: profileSlice.reducer,
   },
 });
 
