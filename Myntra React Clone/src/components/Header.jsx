@@ -6,6 +6,8 @@ const Header = () => {
   // Pulling the item tracking array to dynamically compute bag item count
   const bag = useSelector((store) => store.bag);
   const searchQuery = useSelector((store) => store.search.query);
+  const wishlistItems = useSelector((store) => store.wishlist.items);
+
   const dispatch = useDispatch();
 
   const handleSearch = (event) => {
@@ -60,10 +62,24 @@ const Header = () => {
           <span className='action_name'>Profile</span>
         </div>
 
-        <div className='action_container'>
-          <span className='material-symbols-outlined'>favorite</span>
-          <span className='action_name'>Wishlist</span>
-        </div>
+        <Link
+          className='action_container'
+          to='/wishlist'
+          aria-label={`Wishlist, ${wishlistItems.length} ${
+            wishlistItems.length === 1 ? "item" : "items"
+          }`}
+        >
+          <span className='material-symbols-outlined' aria-hidden='true'>
+            favorite
+          </span>
+
+          <span className='action_name'>
+            Wishlist
+            {wishlistItems.length > 0 && (
+              <span className='wishlist-count'>{wishlistItems.length}</span>
+            )}
+          </span>
+        </Link>
 
         <Link className='action_container' to='/bag'>
           <span className='material-symbols-outlined'>shopping_bag</span>

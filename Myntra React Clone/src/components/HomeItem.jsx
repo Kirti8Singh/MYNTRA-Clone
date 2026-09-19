@@ -1,9 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
 import { toastActions } from "../store/toastSlice";
+import { wishlistActions } from "../store/wishlistSlice";
 
 const HomeItem = ({ item }) => {
   const dispatch = useDispatch();
+
+  const isWishlisted = useSelector((store) =>
+    store.wishlist.items.some((wishlistItem) => wishlistItem.id === item.id)
+  );
+
   const bagItems = useSelector((store) => store.bag);
 
   // Checks if this specific product already exists inside the global cart array
@@ -22,6 +28,23 @@ const HomeItem = ({ item }) => {
   return (
     <div className='item-container'>
       <img className='item-image' src={item.image} alt={item.item_name} />
+      <button
+        type='button'
+        className={`wishlist-button ${
+          isWishlisted ? "wishlist-button-active" : ""
+        }`}
+        onClick={() => dispatch(wishlistActions.toggleWishlist(item))}
+        aria-label={
+          isWishlisted
+            ? `Remove ${item.item_name} from wishlist`
+            : `Add ${item.item_name} to wishlist`
+        }
+        aria-pressed={isWishlisted}
+      >
+        <span className='material-symbols-outlined' aria-hidden='true'>
+          {isWishlisted ? "favorite" : "favorite_border"}
+        </span>
+      </button>
       <div className='rating'>
         {item.rating.stars} ⭐ | {item.rating.count} reviews
       </div>

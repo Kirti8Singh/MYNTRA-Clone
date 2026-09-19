@@ -138,6 +138,7 @@ header {
   overflow: hidden;
   background-color: #fff;
   transition: transform 0.2s ease;
+  position: relative;
 }
 
 .item-container:hover {
@@ -532,4 +533,51 @@ footer {
 .filter-option input {
   width: 16px;
   height: 16px;
+}
+.wishlist-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.wishlist-button .material-symbols-outlined {
+  font-size: 24px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.wishlist-button-active .material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.wishlist-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  padding: 0 4px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: red;
 }
